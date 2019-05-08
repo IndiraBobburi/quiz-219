@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<h1>Cybersecurity Quiz</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+        {% for i in q %}
+        	<div>
+	            <li>{{i}}</li><br>
+	            {% for j in o[i] %}
+	                <input type='radio' value='{{j}}' name='  {{i}}  ' />{{j}}<br><br>
+	            {% endfor %}
+	            <br><br>
+	        </div>
+        {% endfor %}
+    </ol>
+    <input type="submit" value="submit" />
+</form>
+</body>
+</html>
+
